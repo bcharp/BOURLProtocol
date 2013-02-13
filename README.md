@@ -1,7 +1,7 @@
 BOURLProtocol
 =============
 
-Mocking services
+Mock network call easily
 
 This two little files help manage asynchronous testing or more generaly, mocking of network call.
 It is made with the idea of working with AFNetworking.
