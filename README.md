@@ -22,7 +22,7 @@ Quick Exemple with GHAsyncTestCase :
     // When
     [self prepare];
     
-    [[MyAPIClient sharedClient] getPath:@"categories.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[MyAPIClient sharedClient] getPath:@"/categories.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
       //responseObject is made with the categories.json file in my app.
         
