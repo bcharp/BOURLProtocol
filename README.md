@@ -7,7 +7,9 @@ This two little files help manage asynchronous testing or more generaly, mocking
 It is made with the idea of working with AFNetworking.
 Based on NSURLProtocol.
 
-Test project with more exemple and clean presentation of this readme file, will be made before the 20.
+A full project with test and exemple will be made before the 28/02/13
+(actually the code is test driven, so it's mostly cleaning files)
+
 Don't hesitate to send me an email for more information until then : boris.charpentier@gmail.com
 
 Quick Exemple with GHAsyncTestCase : 
