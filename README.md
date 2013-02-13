@@ -97,7 +97,9 @@ Quick Exemple with GHAsyncTestCase :
 
  /!\ BEWARE /!\ ALL KEY AND VALUE IN PARAMS SHOULD BE NSSTRING. /!\ BEWARE /!\
  */
-+ (void)stubPath:(NSString *)path parameters:(NSDictionary *)params mimeType:(NSString *)mimeType load:(NSURL *)url;//untested
+ //This feature seems to not always work correctly in CI this is why it is commented
+//Next version would hopefully fix it
+//+ (void)stubPath:(NSString *)path parameters:(NSDictionary *)params mimeType:(NSString *)mimeType load:(NSURL *)url;//untested
 /**
  Use this to return data directly.
  The default MIMETYPE is @"application/json"
