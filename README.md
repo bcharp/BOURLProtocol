@@ -13,7 +13,8 @@ A full project with test and exemple will be made before the 28/02/13
 Don't hesitate to send me an email for more information until then : boris.charpentier@gmail.com
 
 Quick Exemple with GHAsyncTestCase : 
-```
+
+```objc
 - (void)test_retrieve_protocolLOAD
 {
     // Given
@@ -41,7 +42,7 @@ Quick Exemple with GHAsyncTestCase :
 ```
 
 .h extract with comments : 
-```
+```objc
 /*****************************************************************************/
 #pragma mark - Initialisation
 /**
