@@ -39,7 +39,7 @@ Quick Exemple with GHAsyncTestCase :
 ```
 
 .h extract with comments : 
-
+```
 /*****************************************************************************/
 #pragma mark - Initialisation
 /**
@@ -135,7 +135,7 @@ Quick Exemple with GHAsyncTestCase :
  The unregister method remove all.
  */
 + (void)removeStubForPath:(NSString *)path;
-
+```
 
 
 License
