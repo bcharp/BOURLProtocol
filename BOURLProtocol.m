@@ -252,8 +252,18 @@ static NSString * const kENCODING = @"UTF8";
     NSString *path = [[request URL] relativePath];
     
     BOOL hasPath = [[[self subtitutionDictionary] allKeys] containsObject:path];
-    
     id object = [[self subtitutionDictionary] objectForKey:path];
+    
+    if (hasPath == NO)
+    {
+        NSString *firstChar = [path substringWithRange:NSMakeRange(0, 1)];
+        if ([firstChar isEqualToString:@"/"])
+        {
+            hasPath = [[[self subtitutionDictionary] allKeys] containsObject:[path substringFromIndex:1]]; 
+            object = [[self subtitutionDictionary] objectForKey:[path substringFromIndex:1]];
+        }
+    }
+    
     BOOL hasMatchingParam = YES;
     
     if ([object isKindOfClass:[NSDictionary class]])
@@ -295,6 +305,11 @@ static NSString * const kENCODING = @"UTF8";
     [[self class] addPath:[requestUrl relativePath]];
     
     id object = [[self class] stubObjectForPath:[requestUrl relativePath]];
+    NSString *firstChar = [[requestUrl relativePath] substringWithRange:NSMakeRange(0, 1)];
+    if (object == nil && [firstChar isEqualToString:@"/"])
+    {
+        object = [[self class] stubObjectForPath:[[requestUrl relativePath] substringFromIndex:1]];
+    }
     
     if ([object isKindOfClass:[NSData class]])
     {
